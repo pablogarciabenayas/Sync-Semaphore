@@ -30,17 +30,11 @@ public class Main {
 	    int  maxSimultaneousTh= scanner.nextInt();
 
 		FileSelector fileSelector = new FileSelector();
-//		dFolder = "/home/pablo/Escritorio/pc/descargas"; // solo pruebas
-		dFolder = fileSelector.selectDirectory(); // utilizar para entrega final
+		dFolder = fileSelector.selectDirectory();
 		
 		System.out.println("Carpeta asignada para guardar -> \t"+dFolder);
-//		WebProcessor webProcessor = new WebProcessor(dFolder,4,3); // solo pruebas
-		
-		WebProcessor webProcessor = new WebProcessor(dFolder,maxTh,maxSimultaneousTh); //utilizar para entrega final
-
-//		String wFile = "/home/pablo/Escritorio/pc/top_sites_themoz.txt"; // solo pruebas
-//		String wFile = "/home/pablo/Escritorio/pc/wwwTest.txt"; // solo pruebas
-		wFile = fileSelector.selectFile(); // utilizar para entrega final
+		WebProcessor webProcessor = new WebProcessor(dFolder,maxTh,maxSimultaneousTh);
+		wFile = fileSelector.selectFile(); 
 
 		System.out.println("Fichero elegido con direcciones web -> \t" + wFile);
 		System.out.println("\nEl programa procedera a descargar los ficheros html en la carpeta asiganda.");

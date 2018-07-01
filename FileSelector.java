@@ -40,8 +40,6 @@ public class FileSelector {
 			chooser.setAcceptAllFileFilterUsed(false);
 
 			if (chooser.showOpenDialog(null) == JFileChooser.APPROVE_OPTION) {
-//			  System.out.println("getCurrentDirectory(): " + chooser.getCurrentDirectory());
-//			  System.out.println("getSelectedFile() : " + chooser.getSelectedFile());
 			  result = chooser.getSelectedFile().getPath();
 			} else {
 			  System.out.println("No Selection ");
